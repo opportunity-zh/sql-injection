@@ -57,7 +57,9 @@ Du kannst dich ohne eine E-Mail oder ein Passwort zu kennen einloggen, indem Du 
 
 Wenn Du auf Login klickst, wird es die erste Person eingeloggt, die im users Table vorhanden ist.
 
-Der Befehl macht folgendes: Mit der OR Klausel werden die anderen WHERE Klauseln ignoriert, weil 1=1 immer true ergibt wird das OR verwendet anstatt dass email und Passwort abgefragt werden.
+Der Befehl macht folgendes: Mit dem Anführungzeichen wird der Anfang des Queries abgeschlossen und mit der OR Klauser ergänzt. Denn dank der OR Klausel werden die anderen WHERE Klauseln ignoriert. Denn weil 1=1 immer true ergibt wird das OR verwendet anstatt dass Email und Passwort abgefragt werden.
+
+Deshalb wird die erste person aus der DB ausgegeben.
 
 Eine weitere nützliche Funktion ist, wenn Du Dich mit einem bestimmten E-Mail Adresse einloggen willst und Du das Passwort nicht kennst.
 
