@@ -77,9 +77,11 @@ emily.brown@example.com' #
 
 ## Script einschleusen
 
-Nun hast Du Dich mit einem Account eingeloggt, der nicht dir gehört und du kannst noch ein Bisschen weiter hacken.
+Nun hast Du Dich mit einem Account eingeloggt, der nicht dir gehört und du kannst noch ein Bisschen weiter machen.
 
 Du wurdes auf das Dashboard weitergeleitet und siehst, dass es dort ein Formular zum Erfassen von Kommentaren hat.
+
+Bevor du etwas machst: **Importiere comments.sql.**
 
 Füge ein Javascript Skript ein, das nur mal Hall Welt ausgibt. Wenn das funktioniert, bist Du in der Lage, von Dir geschriebenen Javascript Code auf anderen Computern auszuführen.
 
