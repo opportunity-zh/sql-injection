@@ -57,9 +57,14 @@ Du kannst dich ohne eine E-Mail oder ein Passwort zu kennen einloggen, indem Du 
 
 Wenn Du auf Login klickst, wird es die erste Person eingeloggt, die im users Table vorhanden ist.
 
-Der Befehl macht folgendes: Mit dem Anführungzeichen wird der Anfang des Queries abgeschlossen und mit der OR Klauser ergänzt. Denn dank der OR Klausel werden die anderen WHERE Klauseln ignoriert. Denn weil 1=1 immer true ergibt wird das OR verwendet anstatt dass Email und Passwort abgefragt werden.
+Der Befehl macht folgendes:
 
-Deshalb wird die erste person aus der DB ausgegeben.
+- Mit dem Anführungzeichen wird die Abfrage nach dem Passwort als leerer String abgeschlossen
+- Der Query wird dann mit der OR Klausel ergänzt. Dank dieser werden die anderen WHERE Klauseln ignoriert.
+- Denn weil 1=1 immer true ergibt wird das OR verwendet anstatt dass Email und Passwort abgefragt werden
+- Der Hashtag am Schluss hilft dabei, dass das schliessende Anführungszeichen als Kommentar interpretiert wird und kein Fehler ausgegeben wird
+
+Deshalb wird die erste Person aus der DB ausgegeben.
 
 Eine weitere nützliche Funktion ist, wenn Du Dich mit einem bestimmten E-Mail Adresse einloggen willst und Du das Passwort nicht kennst.
 
@@ -68,6 +73,8 @@ Gehe dazu in die DB und finde eine E-Mail Adresse, mit welcher Du Dich einloggen
 ```bash
 emily.brown@example.com' #
 ```
+
+Diese Injection ändert den Query so ab, dass alles was nach der Überprüfung der E-Mail Adresse als Kommentar interpretiert wird und somit nur die E-Mail Adresse vorhanden sein muss.
 
 **Verbessere den Code so, dass das nicht mehr geht**
 
@@ -81,11 +88,11 @@ emily.brown@example.com' #
 
 Nun hast Du Dich mit einem Account eingeloggt, der nicht dir gehört und du kannst noch ein Bisschen weiter machen.
 
-Du wurdes auf das Dashboard weitergeleitet und siehst, dass es dort ein Formular zum Erfassen von Kommentaren hat.
+Du wurdest auf das Dashboard weitergeleitet und siehst, dass es dort ein Formular zum Erfassen von Kommentaren hat.
 
 Bevor du etwas machst: **Importiere comments.sql.**
 
-Füge ein Javascript Skript ein, das nur mal Hall Welt ausgibt. Wenn das funktioniert, bist Du in der Lage, von Dir geschriebenen Javascript Code auf anderen Computern auszuführen.
+Füge ein Javascript Skript ein, das nur mal "Hallo Welt" ausgibt. Wenn das funktioniert, bist Du in der Lage, von Dir geschriebenen Javascript Code auf anderen Computern auszuführen.
 
 Füge also folgendes Script in die Textarea im Dashboard ein.
 
@@ -99,7 +106,7 @@ Was passiert, wenn Du auf "Kommentare ansehen" klickst?
 
 Öffne PHPMyAdmin um das eingefügte script wieder aus der DB zu löschen, damit sich nicht bei jedem Refresh ein Alert öffnet.
 
-Weil Du nun weisst, dass Du in der Lage bist, Javascript auszuführen, könntest Du folgendes probieren:
+Weil Du nun weisst, dass Du in der Lage bist, Javascript auszuführen, kannst Du folgendes probieren:
 
 - Füge ein Script in die DB, das dich auf eine andere Website weiterleitet
 - Speichere das folgende Script über das Formular, besuche die Seite comments.php, öffne die Console und schau was passiert, wenn Du tippst
